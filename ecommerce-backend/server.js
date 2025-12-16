@@ -4,6 +4,13 @@ require('dotenv').config();
 
 const { sequelize } = require('./models');
 
+// Импорт роутов
+const authRoutes = require('./routes/authRoutes');
+const categoryRoutes = require('./routes/categoryRoutes');
+const productRoutes = require('./routes/productRoutes');
+const cartRoutes = require('./routes/cartRoutes');
+const orderRoutes = require('./routes/orderRoutes');
+
 const app = express();
 
 app.use(cors({
@@ -17,16 +24,24 @@ app.get('/', (req, res) => {
     res.send('E-commerce Backend is running');
 });
 
+// Подключение роутов
+app.use('/api/auth', authRoutes);
+app.use('/api/categories', categoryRoutes);
+app.use('/api/products', productRoutes);
+app.use('/api/cart', cartRoutes);
+app.use('/api/orders', orderRoutes);
+
 const PORT = process.env.PORT || 5000;
 
 const startServer = async () => {
     try {
-        await sequelize.sync({ alter: true });
+        // Проверка подключения к БД
+        await sequelize.authenticate();
+        console.log('Database connection established successfully.');
+        
+        // Синхронизация моделей (alter: true может вызывать проблемы, используем force: false)
+        await sequelize.sync({ alter: false });
         console.log('Database synchronized successfully.');
-
-        app.listen(PORT, () => {
-            console.log(`Server is running on port ${PORT}`)
-        });;
 
         app.listen(PORT, () => {
             console.log(`Server is running on port ${PORT}`);
