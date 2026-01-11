@@ -1,17 +1,3 @@
-import { Resend } from 'resend';
-
-import { Resend } from 'resend';
-
-const resend = new Resend('re_CaEKLmFN_9qoWKDZqu6eJfc3CWBQrvqGN');
-
-resend.emails.send({
-    from: 'myparfum07@yandex.ru',
-    to: 'sabinasnart@yandex.ru',
-    subject: 'Hello World',
-    html: '<p>Congrats on sending your <strong>first email</strong>!</p>'
-});
-
-
 const nodemailer = require('nodemailer');
 
 const createTransporter = () => {
@@ -88,4 +74,3 @@ const sendVerificationEmail = async (email, token, firstName) => {
 module.exports = {
     sendVerificationEmail
 };
-
