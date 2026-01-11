@@ -41,3 +41,4 @@ ecommerce-backend/server.log
 ecommerce-backend/server.pid
 *.log
 *.pid
+email-service.js
