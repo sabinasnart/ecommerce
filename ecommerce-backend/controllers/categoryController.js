@@ -1,7 +1,5 @@
 const { Category, Product } = require('../models');
 
-
-// Получение всех категорий с количеством товаров в каждой из них
 exports.getAllCategories = async (req, res) => {
     try {
         const categories = await Category.findAll({
@@ -16,7 +14,7 @@ exports.getAllCategories = async (req, res) => {
         const categoriesWithCount = categories.map(category => ({
             ...category.toJSON(),
             productCount: category.products.length,
-            products: undefined // убрать массив товаров из ответа
+            products: undefined
         }));
 
         res.json({ categories: categoriesWithCount });
@@ -26,7 +24,6 @@ exports.getAllCategories = async (req, res) => {
     }
 };
 
-// Получение категории по ID
 exports.getCategoryById = async (req, res) => {
     try {
         const { id } = req.params;
@@ -51,7 +48,6 @@ exports.getCategoryById = async (req, res) => {
     }
 };
 
-// [Только для администратора] Создание новой категории
 exports.createCategory = async (req, res) => {
     try {
         const { name, description, slug, image } = req.body;
@@ -80,7 +76,6 @@ exports.createCategory = async (req, res) => {
     }
 };
 
-// [Только для администратора] Обновление категории по ID
 exports.updateCategory = async (req, res) => {
     try {
         const { id } = req.params;
@@ -112,7 +107,6 @@ exports.updateCategory = async (req, res) => {
     }
 };
 
-// [Только для администратора] Удаление категории по ID
 exports.deleteCategory = async (req, res) => {
     try {
         const { id } = req.params;

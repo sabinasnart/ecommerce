@@ -1,7 +1,6 @@
 const { Product, Category } = require('../models');
 const { Op } = require('sequelize');
 
-// получение всех товаров
 exports.getAllProducts = async (req, res) => {
     try {
         const {
@@ -17,12 +16,18 @@ exports.getAllProducts = async (req, res) => {
 
         const offset = (page - 1) * limit;
 
-        // условия фильтрации
         const where = { isActive: true };
 
         if (category) {
             where.categoryId = category;
         }
+
+        const includeOptions = [{
+            model: Category,
+            as: 'category',
+            attributes: ['id', 'name', 'slug'],
+            required: false
+        }];
 
         if (search) {
             where[Op.or] = [
@@ -39,11 +44,7 @@ exports.getAllProducts = async (req, res) => {
 
         const { count, rows: products } = await Product.findAndCountAll({
             where,
-            include: [{
-                model: Category,
-                as: 'category',
-                attributes: ['id', 'name', 'slug']
-            }],
+            include: includeOptions,
             limit: parseInt(limit),
             offset: parseInt(offset),
             order: [[sortBy, order]]
@@ -64,7 +65,6 @@ exports.getAllProducts = async (req, res) => {
     }
 };
 
-// получение товара по id
 exports.getProductById = async (req, res) => {
     try {
         const { id } = req.params;
@@ -88,7 +88,6 @@ exports.getProductById = async (req, res) => {
     }
 };
 
-// создание товара (только для админа)
 exports.createProduct = async (req, res) => {
     try {
         const {
@@ -109,7 +108,6 @@ exports.createProduct = async (req, res) => {
             });
         }
 
-        // проверка существования категории
         const category = await Category.findByPk(categoryId);
         if (!category) {
             return res.status(404).json({ error: 'Категория не найдена' });
@@ -140,7 +138,6 @@ exports.createProduct = async (req, res) => {
     }
 };
 
-// обновление товара (только для админа)
 exports.updateProduct = async (req, res) => {
     try {
         const { id } = req.params;
@@ -152,7 +149,6 @@ exports.updateProduct = async (req, res) => {
             return res.status(404).json({ error: 'Товар не найден' });
         }
 
-        // при изменении категории проверяем её существование
         if (updateData.categoryId) {
             const category = await Category.findByPk(updateData.categoryId);
             if (!category) {
@@ -172,7 +168,6 @@ exports.updateProduct = async (req, res) => {
     }
 };
 
-// удаление товара (только для админа)
 exports.deleteProduct = async (req, res) => {
     try {
         const { id } = req.params;

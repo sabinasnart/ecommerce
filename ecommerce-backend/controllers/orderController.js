@@ -1,7 +1,6 @@
 const { Order, OrderItem, Cart, Product, User } = require('../models');
 const { sequelize } = require('../models');
 
-// создание заказа
 exports.createOrder = async (req, res) => {
     const t = await sequelize.transaction();
 
@@ -13,7 +12,6 @@ exports.createOrder = async (req, res) => {
             return res.status(400).json({ error: 'Адрес доставки обязателен' });
         }
 
-        // получение корзины пользователя
         const cartItems = await Cart.findAll({
             where: { userId },
             include: [{
@@ -28,7 +26,6 @@ exports.createOrder = async (req, res) => {
             return res.status(400).json({ error: 'Корзина пуста' });
         }
 
-        // проверка наличия товаров
         for (const item of cartItems) {
             if (!item.product.isActive) {
                 await t.rollback();
@@ -44,15 +41,12 @@ exports.createOrder = async (req, res) => {
             }
         }
 
-        // подсчет общей суммы
         const totalAmount = cartItems.reduce((sum, item) => {
             return sum + (parseFloat(item.product.price) * item.quantity);
         }, 0);
 
-        // генерация номера заказа
         const orderNumber = `ORD-${Date.now()}-${userId}`;
 
-        // создание заказа
         const order = await Order.create({
             orderNumber,
             userId,
@@ -62,22 +56,19 @@ exports.createOrder = async (req, res) => {
             notes
         }, { transaction: t });
 
-        // создание товаров заказа
         for (const item of cartItems) {
             await OrderItem.create({
                 orderId: order.id,
                 productId: item.productId,
                 quantity: item.quantity,
-                price: item.product.price // фиксирование цены на момент заказа
+                price: item.product.price
             }, { transaction: t });
 
-            // уменьшение количества на складе
             await item.product.update({
                 stock: item.product.stock - item.quantity
             }, { transaction: t });
         }
 
-        // очистка корзины
         await Cart.destroy({
             where: { userId },
             transaction: t
@@ -85,7 +76,6 @@ exports.createOrder = async (req, res) => {
 
         await t.commit();
 
-        // получение созданного заказа с товарами
         const createdOrder = await Order.findByPk(order.id, {
             include: [{
                 model: OrderItem,
@@ -109,7 +99,6 @@ exports.createOrder = async (req, res) => {
     }
 };
 
-// получение всех заказов пользователя
 exports.getUserOrders = async (req, res) => {
     try {
         const userId = req.user.id;
@@ -135,7 +124,6 @@ exports.getUserOrders = async (req, res) => {
     }
 };
 
-// получение заказа по id
 exports.getOrderById = async (req, res) => {
     try {
         const { id } = req.params;
@@ -174,7 +162,6 @@ exports.getOrderById = async (req, res) => {
     }
 };
 
-// обновление статуса заказа (только для админа)
 exports.updateOrderStatus = async (req, res) => {
     try {
         const { id } = req.params;
@@ -201,7 +188,6 @@ exports.updateOrderStatus = async (req, res) => {
     }
 };
 
-// получение всех заказов (только для админа)
 exports.getAllOrders = async (req, res) => {
     try {
         const { page = 1, limit = 20, status } = req.query;

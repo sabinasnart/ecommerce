@@ -22,6 +22,11 @@ const Product = sequelize.define('Product', {
         type: DataTypes.DECIMAL(10, 2),
         comment: 'Цена до скидки'
     },
+    volumes: {
+        type: DataTypes.JSONB,
+        defaultValue: null,
+        comment: 'Цены за разные объемы: { "2": 400, "3": 550, "5": 800, "10": 1500 }'
+    },
     stock: {
         type: DataTypes.INTEGER,
         defaultValue: 0,

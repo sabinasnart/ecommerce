@@ -32,6 +32,9 @@ ecommerce-backend/test-api.js
 ecommerce-backend/quick-test.sh
 ecommerce-backend/TESTING.md
 ecommerce-backend/README-TESTING.md
+ecommerce-backend/README-EMAIL.md
+ecommerce-backend/README-EMAIL-SETUP.md
+src/App.test.js
 
 # server logs and temp files
 ecommerce-backend/server.log

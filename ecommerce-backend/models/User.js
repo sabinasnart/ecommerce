@@ -37,6 +37,14 @@ const User = sequelize.define('User', {
     },
     phone: {
         type: DataTypes.STRING(20),
+    },
+    emailVerified: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false
+    },
+    emailVerificationToken: {
+        type: DataTypes.STRING(255),
+        allowNull: true
     }
 }, {
     tableName: 'users',

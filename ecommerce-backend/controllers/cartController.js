@@ -1,6 +1,5 @@
 const { Cart, Product } = require('../models');
 
-// получение корзины пользователя
 exports.getCart = async (req, res) => {
     try {
         const userId = req.user.id;
@@ -14,7 +13,6 @@ exports.getCart = async (req, res) => {
             }]
         });
 
-        // подсчет общей суммы
         const total = cartItems.reduce((sum, item) => {
             return sum + (parseFloat(item.product.price) * item.quantity);
         }, 0);
@@ -30,7 +28,6 @@ exports.getCart = async (req, res) => {
     }
 };
 
-// добавление товара в корзину
 exports.addToCart = async (req, res) => {
     try {
         const userId = req.user.id;
@@ -40,27 +37,23 @@ exports.addToCart = async (req, res) => {
             return res.status(400).json({ error: 'ID товара обязателен' });
         }
 
-        // проверка существования товара
         const product = await Product.findByPk(productId);
 
         if (!product || !product.isActive) {
             return res.status(404).json({ error: 'Товар не найден' });
         }
 
-        // проверка наличия
         if (product.stock < quantity) {
             return res.status(400).json({
                 error: `На складе только ${product.stock} шт.`
             });
         }
 
-        // проверка наличия товара в корзине
         let cartItem = await Cart.findOne({
             where: { userId, productId }
         });
 
         if (cartItem) {
-            // обновление количества
             const newQuantity = cartItem.quantity + quantity;
 
             if (product.stock < newQuantity) {
@@ -71,7 +64,6 @@ exports.addToCart = async (req, res) => {
 
             await cartItem.update({ quantity: newQuantity });
         } else {
-            // создание новой записи
             cartItem = await Cart.create({
                 userId,
                 productId,
@@ -79,7 +71,6 @@ exports.addToCart = async (req, res) => {
             });
         }
 
-        // получение обновлённой корзины
         const updatedCart = await Cart.findAll({
             where: { userId },
             include: [{
@@ -98,7 +89,6 @@ exports.addToCart = async (req, res) => {
     }
 };
 
-// обновление количества товара в корзине
 exports.updateCartItem = async (req, res) => {
     try {
         const userId = req.user.id;
@@ -121,7 +111,6 @@ exports.updateCartItem = async (req, res) => {
             return res.status(404).json({ error: 'Товар в корзине не найден' });
         }
 
-        // проверка наличия
         if (cartItem.product.stock < quantity) {
             return res.status(400).json({
                 error: `На складе только ${cartItem.product.stock} шт.`
@@ -140,7 +129,6 @@ exports.updateCartItem = async (req, res) => {
     }
 };
 
-// удаление товара из корзины
 exports.removeFromCart = async (req, res) => {
     try {
         const userId = req.user.id;
@@ -163,7 +151,6 @@ exports.removeFromCart = async (req, res) => {
     }
 };
 
-// очистка корзины
 exports.clearCart = async (req, res) => {
     try {
         const userId = req.user.id;

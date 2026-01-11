@@ -1,0 +1,371 @@
+[
+    {
+        "category": "Chanel",
+        "name": "Bleu de CHANEL",
+        "price2ml": 600,
+        "price3ml": 850,
+        "price5ml": 1250,
+        "price10ml": 2000,
+        "image": "https://fimgs.net/mdimg/perfume-thumbs/375x500.25967.2x.avif"
+    },
+    {
+        "category": "Louis Vuitton",
+        "name": "Attrape-Reves",
+        "price2ml": 1200,
+        "price3ml": 1650,
+        "price5ml": 2500,
+        "price10ml": 4500,
+        "image": "https://fimgs.net/mdimg/perfume-thumbs/375x500.51016.2x.avif"
+    },
+    {
+        "category": "Louis Vuitton",
+        "name": "Symphony",
+        "price2ml": 1900,
+        "price3ml": 2750,
+        "price5ml": 4400,
+        "price10ml": 8500,
+        "image": "https://fimgs.net/mdimg/perfume-thumbs/375x500.68357.2x.avif"
+    },
+    {
+        "category": "Clive Christian",
+        "name": "Blonde Amber",
+        "price2ml": 1600,
+        "price3ml": 2250,
+        "price5ml": 3650,
+        "price10ml": 7000,
+        "image": "https://fimgs.net/mdimg/perfume-thumbs/375x500.73595.2x.avif"
+    },
+    {
+        "category": "Tom Ford",
+        "name": "Ombre Leather",
+        "price2ml": 550,
+        "price3ml": 750,
+        "price5ml": 1100,
+        "price10ml": 1900,
+        "image": "https://fimgs.net/mdimg/perfume-thumbs/375x500.50239.2x.avif"
+    },
+    {
+        "category": "Orto Parisi",
+        "name": "Megamare",
+        "price2ml": 850,
+        "price3ml": 1200,
+        "price5ml": 1900,
+        "price10ml": 3500,
+        "image": "https://fimgs.net/mdimg/perfume-thumbs/375x500.53471.2x.avif"
+    },
+    {
+        "category": "Tom Ford",
+        "name": "Lost Cherry",
+        "price2ml": 800,
+        "price3ml": 1150,
+        "price5ml": 1800,
+        "price10ml": 3500,
+        "image": "https://fimgs.net/mdimg/perfume-thumbs/375x500.51411.2x.avif"
+    },
+    {
+        "category": "Haute Fragrance Company HFC",
+        "name": "Devil's Intrigue",
+        "price2ml": 850,
+        "price3ml": 1200,
+        "price5ml": 1900,
+        "price10ml": 5600,
+        "image": "https://fimgs.net/mdimg/perfume-thumbs/375x500.52792.2x.avif"
+    },
+    {
+        "category": "Xerjoff",
+        "name": "Erba Pura",
+        "price2ml": 550,
+        "price3ml": 750,
+        "price5ml": 1000,
+        "price10ml": 1800,
+        "image": "https://fimgs.net/mdimg/perfume-thumbs/375x500.55157.2x.avif"
+    },
+    {
+        "category": "Creed",
+        "name": "Silver Mountain Water",
+        "price2ml": 600,
+        "price3ml": 850,
+        "price5ml": 1250,
+        "price10ml": 2200,
+        "image": "https://fimgs.net/mdimg/perfume-thumbs/375x500.472.2x.avif"
+    },
+    {
+        "category": "Amouage",
+        "name": "Existence",
+        "price2ml": 650,
+        "price3ml": 900,
+        "price5ml": 1400,
+        "price10ml": 2500,
+        "image": "https://fimgs.net/mdimg/perfume-thumbs/375x500.103893.2x.avif"
+    },
+    {
+        "category": "Amouage",
+        "name": "Honour",
+        "price2ml": 600,
+        "price3ml": 850,
+        "price5ml": 1250,
+        "price10ml": 2000,
+        "image": "https://fimgs.net/mdimg/perfume-thumbs/375x500.12762.2x.avif"
+    },
+    {
+        "category": "Amouage",
+        "name": "Guidance",
+        "price2ml": 850,
+        "price3ml": 1200,
+        "price5ml": 1800,
+        "price10ml": 3400,
+        "image": "https://fimgs.net/mdimg/perfume-thumbs/375x500.78656.2x.avif"
+    },
+    {
+        "category": "Amouage",
+        "name": "Sunshine",
+        "price2ml": 600,
+        "price3ml": 850,
+        "price5ml": 1250,
+        "price10ml": 2200,
+        "image": "https://fimgs.net/mdimg/perfume-thumbs/375x500.28182.2x.avif"
+    },
+    {
+        "category": "Van Cleef & Arpels",
+        "name": "Neroli Amara Collection Exrtaordinaire",
+        "price2ml": 700,
+        "price3ml": 900,
+        "price5ml": 1500,
+        "price10ml": 2800,
+        "image": "https://fimgs.net/mdimg/perfume-thumbs/375x500.49913.2x.avif"
+    },
+    {
+        "category": "Liquides Imaginaires",
+        "name": "BLANCHE BÊTE",
+        "price2ml": 600,
+        "price3ml": 850,
+        "price5ml": 1250,
+        "price10ml": 2200,
+        "image": "https://fimgs.net/mdimg/perfume-thumbs/375x500.70189.2x.avif"
+    },
+    {
+        "category": "ROJA",
+        "name": "Elysium Pour Homme",
+        "price2ml": 700,
+        "price3ml": 1000,
+        "price5ml": 1450,
+        "price10ml": 2500,
+        "image": "https://fimgs.net/mdimg/perfume-thumbs/375x500.46296.2x.avif"
+    },
+    {
+        "category": "Orlov",
+        "name": "De Young Red",
+        "price2ml": 500,
+        "price3ml": 700,
+        "price5ml": 1000,
+        "price10ml": 1800,
+        "image": "https://fimgs.net/mdimg/perfume-thumbs/375x500.52075.2x.avif"
+    },
+    {
+        "category": "RudRoss",
+        "name": "Road to Paradise",
+        "price2ml": 500,
+        "price3ml": 600,
+        "price5ml": 7500,
+        "price10ml": 1200,
+        "image": "https://fimgs.net/mdimg/perfume-thumbs/375x500.83024.2x.avif"
+    },
+    {
+        "category": "Ella K Parfums",
+        "name": "Musc K",
+        "price2ml": 600,
+        "price3ml": 850,
+        "price5ml": 1250,
+        "price10ml": 2000,
+        "image": "https://fimgs.net/mdimg/perfume-thumbs/375x500.84119.2x.avif"
+    },
+    {
+        "category": "Hormone Paris",
+        "name": "Gaba",
+        "price2ml": 600,
+        "price3ml": 850,
+        "price5ml": 1250,
+        "price10ml": 2000,
+        "image": "https://fimgs.net/mdimg/perfume-thumbs/375x500.80679.2x.avif"
+    },
+    {
+        "category": "Hormone Paris",
+        "name": "This is not Testosterone ",
+        "price2ml": 600,
+        "price3ml": 850,
+        "price5ml": 1250,
+        "price10ml": 2000,
+        "image": "https://fimgs.net/mdimg/perfume-thumbs/375x500.105751.2x.avif"
+    },
+    {
+        "category": "Haute Fragrance Company HFC",
+        "name": "Sunmusk",
+        "price2ml": 700,
+        "price3ml": 1000,
+        "price5ml": 1450,
+        "price10ml": 2600,
+        "image": "https://fimgs.net/mdimg/perfume-thumbs/375x500.94732.2x.avif"
+    },
+    {
+        "category": "Ex Nihilo",
+        "name": "The Hedonist Extrait de Parfum",
+        "price2ml": 750,
+        "price3ml": 1050,
+        "price5ml": 1650,
+        "price10ml": 3000,
+        "image": "https://fimgs.net/mdimg/perfume-thumbs/375x500.96233.2x.avif"
+    },
+    {
+        "category": "Chopard",
+        "name": "Vetiver d'Haiti au The Vert",
+        "price2ml": 600,
+        "price3ml": 850,
+        "price5ml": 1250,
+        "price10ml": 2200,
+        "image": "https://fimgs.net/mdimg/perfume-thumbs/375x500.45226.2x.avif"
+    },
+    {
+        "category": "Parfums de Marly",
+        "name": "Althair",
+        "price2ml": 600,
+        "price3ml": 850,
+        "price5ml": 1250,
+        "price10ml": 2200,
+        "image": "https://fimgs.net/mdimg/perfume-thumbs/375x500.84109.2x.avif"
+    },
+    {
+        "category": "Louis Vuitton",
+        "name": "L'Immensite",
+        "price2ml": 1200,
+        "price3ml": 1650,
+        "price5ml": 2500,
+        "price10ml": 4500,
+        "image": "https://fimgs.net/mdimg/perfume-thumbs/375x500.49751.2x.avif"
+    },
+    {
+        "category": "Louis Vuitton",
+        "name": "Ombre Nomade",
+        "price2ml": 1200,
+        "price3ml": 1650,
+        "price5ml": 2500,
+        "price10ml": 4500,
+        "image": "https://fimgs.net/mdimg/perfume-thumbs/375x500.49755.2x.avif"
+    },
+    {
+        "category": "Louis Vuitton",
+        "name": "Imagination",
+        "price2ml": 1000,
+        "price3ml": 1400,
+        "price5ml": 2250,
+        "price10ml": 4200,
+        "image": "https://fimgs.net/mdimg/perfume-thumbs/375x500.67370.2x.avif"
+    },
+    {
+        "category": "Louis Vuitton",
+        "name": "Pacific Chill",
+        "price2ml": 1200,
+        "price3ml": 1650,
+        "price5ml": 2500,
+        "price10ml": 4500,
+        "image": "https://fimgs.net/mdimg/perfume-thumbs/375x500.81423.2x.avif"
+    },
+    {
+        "category": "Essential Parfums",
+        "name": "Bois Imperial by Quentin Bisch",
+        "price2ml": 400,
+        "price3ml": 550,
+        "price5ml": 800,
+        "price10ml": 1500,
+        "image": "https://fimgs.net/mdimg/perfume-thumbs/375x500.64338.2x.avif"
+    },
+    {
+        "category": "Louis Vuitton",
+        "name": "Afternoon Swim",
+        "price2ml": 1200,
+        "price3ml": 1650,
+        "price5ml": 2500,
+        "price10ml": 4500,
+        "image": "https://fimgs.net/mdimg/perfume-thumbs/375x500.53947.2x.avif"
+    },
+    {
+        "category": "Maison Crivelli",
+        "name": "Oud Maracuja",
+        "price2ml": 1000,
+        "price3ml": 1450,
+        "price5ml": 2250,
+        "price10ml": 4000,
+        "image": "https://fimgs.net/mdimg/perfume-thumbs/375x500.83842.2x.avif"
+    },
+    {
+        "category": "Creed",
+        "name": "Aventus Absolu",
+        "price2ml": 1100,
+        "price3ml": 1500,
+        "price5ml": 2400,
+        "price10ml": 4500,
+        "image": "https://fimgs.net/mdimg/perfume-thumbs/375x500.84112.2x.avif"
+    },
+    {
+        "category": "Clive Christian",
+        "name": "Matsukita",
+        "price2ml": 1500,
+        "price3ml": 2200,
+        "price5ml": 3500,
+        "price10ml": 6500,
+        "image": "https://fimgs.net/mdimg/perfume-thumbs/375x500.65983.2x.avif"
+    },
+    {
+        "category": "Clive Christian",
+        "name": "E Cashmere Musk",
+        "price2ml": 1200,
+        "price3ml": 1750,
+        "price5ml": 2750,
+        "price10ml": 5000,
+        "image": "https://fimgs.net/mdimg/perfume-thumbs/375x500.90448.2x.avif"
+    },
+    {
+        "category": "Clive Christian",
+        "name": "Hedonistic",
+        "price2ml": 1400,
+        "price3ml": 2050,
+        "price5ml": 3250,
+        "price10ml": 6000,
+        "image": "https://fimgs.net/mdimg/perfume-thumbs/375x500.70767.2x.avif"
+    },
+    {
+        "category": "Maison Crivelli",
+        "name": "Oud Stalion",
+        "price2ml": 1500,
+        "price3ml": 1900,
+        "price5ml": 3000,
+        "price10ml": 5500,
+        "image": "https://fimgs.net/mdimg/perfume-thumbs/375x500.83822.2x.avif"
+    },
+    {
+        "category": "Bvlgari",
+        "name": "Tygar",
+        "price2ml": 900,
+        "price3ml": 1300,
+        "price5ml": 2000,
+        "price10ml": 3500,
+        "image": "https://fimgs.net/mdimg/perfume-thumbs/375x500.41222.2x.avif"
+    },
+    {
+        "category": "Orto Parisi",
+        "name": "Terroni",
+        "price2ml": 700,
+        "price3ml": 1000,
+        "price5ml": 1500,
+        "price10ml": 2800,
+        "image": "https://fimgs.net/mdimg/perfume-thumbs/375x500.45475.2x.avif"
+    },
+    {
+        "category": "Orto Parisi",
+        "name": "Bergamask",
+        "price2ml": 800,
+        "price3ml": 1150,
+        "price5ml": 1750,
+        "price10ml": 3300,
+        "image": "https://fimgs.net/mdimg/perfume-thumbs/375x500.24191.2x.avif"
+    }
+]
